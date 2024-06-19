@@ -26,6 +26,9 @@ public class Main {
 
         Phonenumber.PhoneNumber parsedGermanPhoneNumber = phoneNumberUtil.parse("030 12345678", "DE");
         print(parsedGermanPhoneNumber);
+
+        Phonenumber.PhoneNumber invalidSwissPhoneNumber = phoneNumberUtil.parse("032 631 11 2", "CH");
+        System.out.println(phoneNumberUtil.isValidNumber(invalidSwissPhoneNumber));
     }
 
     private static void print(Phonenumber.PhoneNumber phoneNumber) {
